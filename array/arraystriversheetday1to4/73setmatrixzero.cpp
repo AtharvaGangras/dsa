@@ -70,7 +70,7 @@ public:
         int m = matrix.size(); // returns rows
         int n = matrix[0].size(); //returns columns
         int col0 = 1;
-        for(int i = 0; i<m;i++)
+        for(int i = 0; i<m;i++) //looping rows
         {  //checking if there is 0 in the first column
             if (matrix[i][0] == 0) col0 = 0;
             for(int j = 1; j<n;j++)
