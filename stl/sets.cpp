@@ -52,7 +52,7 @@ int main()
     print(s);
 
     cout<<endl;
-    unordered_set<string> s2; //stores in sorted order O(1) -> same difference as maps
+    unordered_set<string> s2; //stores in unsorted order O(1) -> same difference as maps
     s2.insert("Abc"); // O(1)
     s2.insert("Acc");
     s2.insert("Aac");
