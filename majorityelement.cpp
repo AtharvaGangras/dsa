@@ -60,30 +60,48 @@ public:
         // 
         // then using the second for loop return the solution from the unordered map.
         //time O(nlogn) space O(n)
-        unordered_map <int,int> track;
-        auto it = track.end();
-        int ans = nums.size()/2;
-        for(auto i: nums)
-        {
-            it = track.find(i);
-            if(it == track.end())
-            {
-                track[i] = 1;
-            }
-            else{
-                it->second++;
-            }
-        }
-        for(auto it2:track)
-        {
-            if(it2.second>ans)
-            {
-                return it2.first;
-            }
-        }
-        return 0;
+        // unordered_map <int,int> track;
+        // auto it = track.end();
+        // int ans = nums.size()/2;
+        // for(auto i: nums)
+        // {
+        //     it = track.find(i);
+        //     if(it == track.end())
+        //     {
+        //         track[i] = 1;
+        //     }
+        //     else{
+        //         it->second++;
+        //     }
+        // }
+        // for(auto it2:track)
+        // {
+        //     if(it2.second>ans)
+        //     {
+        //         return it2.first;
+        //     }
+        // }
+        // return 0;
 
         //solution3 : moore's voting algorithm (important)
+        //time complexity O(n) 
+        int ele=0,count = 0;
+        for(int i = 0; i<nums.size();i++)
+        {
+            if(count == 0)
+            {
+                ele = nums[i];
+            }
+            if(ele== nums[i])
+            {
+                count++;
+            }
+            else
+            {
+                count--;
+            }
+        }
+        return ele;
 
 
 
@@ -92,6 +110,6 @@ public:
 int main()
 {
     Solution s;
-    vector<int> nums = {2,2,1,1,1,2,2};
+    vector<int> nums = {3,3,4};
     cout<<s.majorityElement(nums)<<endl;
 }
