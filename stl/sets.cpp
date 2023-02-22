@@ -58,7 +58,7 @@ int main()
     s2.insert("Aac");
     s2.insert("Aac1");
 
-    auto it2 = s2.find("Aac"); // if exists returns iterator pointing to it else it.end(); O(logn)
+    auto it2 = s2.find("Aac"); // if exists returns iterator pointing to it else it.end(); O(1) or O(n)
     if(it2 != s2.end())
         cout<< (*it2)<<endl;
         s2.erase(it2);
