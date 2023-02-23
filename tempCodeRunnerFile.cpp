@@ -1,11 +1,17 @@
-        // for (int i = 0; i < nums.size(); i++)
+        // int maxcount = 0;//maximum size of string
+    
+        // for(int i = 0; i<s.size();i++)
         // {
-        //     for (int j = i + 1; j < nums.size(); j++)
+        //     int count = 0;//max size of current string
+        //     unordered_set<char> c;
+        //     for(int j = i;j<s.size();j++)
         //     {
-        //         if (nums[i] + nums[j] == target)
-        //         {
-        //             return {i, j};
-        //         }
+        //         if(c.find(s[j]) != c.end()) break;
+        //         count++;
+        //         c.insert(s[j]);
+
+
         //     }
+        //     maxcount = max(maxcount,count);
         // }
-        // return {0};
+        // return maxcount;

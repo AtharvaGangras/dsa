@@ -38,7 +38,7 @@ int subarraysXor(vector<int> &arr, int x)
         curxor ^= i; //calculates the current xor.
         if(curxor == x) count++;
         y = curxor^x;
-        if(mp.find(x)!= mp.end()) count+= mp[y];
+        if(mp.find(y)!= mp.end()) count+= mp[y];
         mp[curxor]++;
 
     }
