@@ -56,9 +56,9 @@ int minimumJumps(vector<int> &arr, int n)
         if(loo>= arr.size()-1) break;
         for(int i = current_ind+1;i<=loo;i++)//debug this probably need it to stop exceeding array index 
         {
-            if(maxival<=arr[i])
+            if(maxival<=i+arr[i])
             {
-                maxival = arr[i];
+                maxival = i+arr[i];
                 maxind = i;
             }
         }
